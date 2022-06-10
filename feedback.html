@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FEEDBACK</title>
+</head>
+<style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            background:url('fbb.jpg');
+
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 5px;
+        }
+
+        .container .title {
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .container .title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 40px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+        }
+          input,
+textarea {
+    padding: 15px;
+    border-radius: 12px;
+}
+.container {
+    width: 100vw;
+    margin: auto;
+}
+.form-item {
+    display: grid;
+    grid-template-rows: 50%;
+    padding-top: 15px;
+}
+        button {
+    width: 70%;
+    position: relative;
+    left: 15%;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+    background-color: #97D5E8;
+}
+</style>
+<body>
+    <div class="container">
+      <div class="title">FEEDBACK FORM</div>
+      <br>
+        <form action="feedback1.php" method="POST">
+            <div class="form-item">
+                <label for="">Name: </label>
+                <input type="text" name="namee" placeholder="Name" required>
+                <br>
+            </div>
+            <div class="form-item">
+                <label for="">Phone: </label>
+                <input type="text" name="phone" placeholder="Phone" required>
+            </div><br>
+            <div class="form-item">
+                <label for="">Email: </label>
+                <input type="text" name="email" placeholder="Email" required>
+            </div>
+            <br>
+            <div class="row">
+     <div class="form-item">
+       <label for="message">Message:</label>
+     </div>
+     <div class="form-item">
+       <textarea id="message" name="message1" placeholder="Write something.." style="height:100px"></textarea>  <br><br>
+            <button name="save">Send Email</button>
+     
+        </form>
+    </div>
+
+
+</body>
+
+</html>

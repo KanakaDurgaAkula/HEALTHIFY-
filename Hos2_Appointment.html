@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APPOINTMENT FORM FOR SRI VENKATESWARA HOSPITAL</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            background: url('Appoint.jpg');
+
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: #fff;
+            padding: 25px 30px;
+            border-radius: 5px;
+        }
+
+        .container .title {
+            font-size: 25px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .container .title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 30px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+
+        }
+
+        .container form .user-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px 0 12px 0;
+        }
+
+        form .user-details .input-box {
+            margin-bottom: 15px;
+            width: calc(100% / 2 - 20px);
+        }
+
+        .user-details .input-box .details {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 5px;
+
+        }
+
+        .user-details .input-box input {
+            height: 45px;
+            weight: 100%;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding-left: 15px;
+            font-size: 16px;
+            border-bottom-width: 2px;
+            transition: all 0.3s ease;
+
+        }
+
+        .user-details .input-box input:focus,
+        .user-details .input-box input:valid {
+            border-color: #9b59b6;
+
+        }
+
+        form .gender-details .gender-title {
+            font-size: 20px;
+            font-weight: 500;
+
+        }
+
+        form .gender-details .category {
+            display: flex;
+            width: 80%;
+            margin: 14px 0;
+            justify-content: space-between;
+        }
+
+        .gender-details .category label {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .gender-details .category .dot {
+            height: 18px;
+            width: 18px;
+            background: #d9d9d9;
+            border-radius: 50%;
+            margin-right: 10px;
+            border: 5px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        #dot-1:checked~.category label .one,
+        #dot-2:checked~.category label .two,
+        #dot-3:checked~.category label .three {
+
+            border-color: #d9d9d9;
+            background: #9b59b6;
+        }
+
+        form input[type="radio"] {
+            display: ;
+        }
+
+        form .button {
+
+            height: 45px;
+            margin: 45px 0;
+
+        }
+
+        form .button input {
+            height: 100%;
+            width: 100%;
+            outline: none;
+            color: #fff;
+            border: none;
+            font-size: 18px;
+            font-weight: 500;
+            border-radius: 5px;
+            letter-spacing: 1px;
+            background: linear-gradient(135deg, #71b7e6, #9b59b6);
+        }
+
+        form .button input:hover {
+            background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+        }
+
+        @media (max-width: 584px) {
+            .container {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            form .gender-details .category {
+                width: 100%;
+            }
+
+            .container form .user-details {
+                max-height: 300px;
+                overflow-y: scroll;
+            }
+
+            .user-details::-webkit-scrollbar {
+                width: 0;
+            }
+
+        }
+
+
+
+                .blinking {
+                    animation: blinkingText 1s infinite;
+                    font-family: futura;
+                    font-style: oblique;
+                    width: 100%;
+                    margin: 0 auto;
+                    text-align: center;
+                    color: blue;
+                    font-size: 25px;
+
+                }
+
+
+                @keyframes blinkingText {
+
+                    0% {
+                        opacity: 0;
+                    }
+                    50% {
+                        opacity: .5;
+                    }
+                    100% {
+                        opacity: 1;
+                    }
+                }
+    </style>
+</head>
+
+<body>
+    <div class="container"><br><br>
+        <div class="title">SRI VENKATESWARA HOSPITAL APPOINTMENT</div>
+        <form action="appoint2.php" method="POST">
+            <div class="user-details">
+
+                <div class="input-box">
+                    <span class="details">Full Name</span>
+                    <input type="text" name="pname2" placeholder="Enter Your Name" required>
+                </div>
+                <div class="input-box">
+                      <span class="details">GASTROENTEROLOGY </span>
+                      <select id="stomach" name="stomach" required>
+                        <option value="select">select</option>
+                      <option value="9AM-12PM">9AM-12PM</option>
+                      <option value="1PM-5PM">1PM-5PM</option>
+                      <option value="6PM-10PM">6PM-10PM</option>
+                      </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Email</span>
+                    <input type="text" name="email" placeholder="Enter Your Email" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">NEPHROLOGIST</span>
+                    <select id="kidney" name="kidney" required>
+                      <option value="select">select</option>
+                    <option value="9AM-12PM">9AM-12PM</option>
+                    <option value="1PM-5PM">1PM-5PM</option>
+                    <option value="6PM-10PM">6PM-10PM</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" name="phone" placeholder="Enter Your Phone Number" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="details">PEDIATRICIAN</span>
+                    <select id="children" name="children" required>
+                      <option value="select">select</option>
+                    <option value="10AM-12PM">10AM-12PM</option>
+                    <option value="2PM-4PM">2PM-4PM</option>
+                    </select>
+
+                </div>
+                <div class="input-box">
+                    <span class="details">Address</span>
+                    <input type="text" name="address2" placeholder="Enter Your Present Address" required>
+                </div>
+
+            <div class="input-box">
+                <span class="details">OPHTHAMOLOGIST</span>
+                <select id="eye" name="eyes"required>
+                  <option value="select">select</option>
+                <option value="10AM-12PM">10AM-12PM</option>
+                <option value="2PM-4PM">2PM-4PM</option>
+                </select>
+            </div>
+            <div class="input-box">
+            <span class="details">Date</span>
+
+              <input type="date" name="dates" value="" required></input>
+
+                </select>
+            </div>
+            <div class="input-box">
+                <span class="details">GYENACOLOGY</span>
+                <select id="pregnency" name="pregnancy"required>
+                  <option value="select">select</option>
+                <option value="10AM-12PM">10AM-12PM</option>
+                <option value="2PM-4PM">2PM-4PM</option>
+                </select>
+            </div></div>
+            <br>
+             <div>GENDER:
+                <input type="radio" name="gender" value="male">MALE
+                <input type="radio" name="gender" value="female">FEMALE
+                <input type="radio" name="gender" value="others">OTHERS
+            
+            </div>           
+<br><br>
+<span class="blinking">*confirmation throught E-Mail and Phone call</span>
+                <div class="button"><input type="submit" name="save" align="center" value="SUBMIT"style="width: 600px; height: 50px;font-size:18px">
+                   </div>
+        </form>
+    </div>
+</body>
+
+</html>

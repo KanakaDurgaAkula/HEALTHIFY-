@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body >
+  <head>
+<style>
+   body {
+            background: url('loginn.jpeg');
+
+        }
+img{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<title>HOME</title>
+</head>
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+  <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+  <a href="home.html" class="w3-bar-item w3-button">HOME</a>
+ <a href="HEALTHY.html" class="w3-bar-item w3-button">HEALTH TIPS</a>
+  <a href="labtest.html" class="w3-bar-item w3-button">LAB TESTS</a>
+ <a href="about.html" class="w3-bar-item w3-button">ABOUT US</a>
+ <a href="feedback.html" class="w3-bar-item w3-button">FEEDBACK</a>
+</div>
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">MENU</button>
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+<br>
+
+<img src="logg.png" width=13% height=13%>
+<marquee  width="100%" direction="left" height="100px" >
+<h1><b><i>
+  YOUR ULTIMATE HEALTHCARE PROVIDER</i></b></h1>
+</marquee>
+
+<div class="row">
+  <div class="column" style="text-align:center">
+<h3><b>JANAKI<b></h3>
+    <a href="location1.html"><img src="h1.jpeg" title="JANAKI" width=85%></a><br>
+    <a href="Hos1_Appointment.html" > <button class="button">Appointment</a>
+
+  </div>
+  <div class="column" style="text-align:center">
+<h3><b>Sri Venkateswara<b></h3>
+    <a href="location2.html"><img src="h2.jpeg" title="Sri Venkateswara" width=85%></a><br>
+    <a href="Hos2_Appointment.html"><button class="button">Appointment</a>
+  </div>
+  <div class="column" style="text-align:center">
+<h3><b>Sowbhagya<b></h3>
+    <a href="location3.html"><img src="h3.jpeg" title="Sowbhagya" width=85%></a><br>
+    <a href="Hos3_Appointment.html"> <button class="button">Appointment</a>
+  </div>
+</div>
+</body>
+</html>
